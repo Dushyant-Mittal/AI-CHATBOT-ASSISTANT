@@ -1,0 +1,23 @@
+{
+  "name": "ai-chatbot-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered Q&A chatbot assistant - college mini project (Node.js + Express + Gemini API)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["ai", "chatbot", "express", "nodejs", "gemini-api"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5",
+    "cors": "^2.8.5",
+    "node-fetch": "^2.7.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

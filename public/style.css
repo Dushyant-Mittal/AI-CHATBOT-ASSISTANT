@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6e9f7 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 640px;
+  height: 90vh;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-header {
+  background: #4a54e1;
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header h1 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.reset-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f7f8fc;
+}
+
+.message {
+  display: flex;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+}
+
+.message.user .bubble {
+  background: #4a54e1;
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+.message.bot .bubble {
+  background: #e9eaf5;
+  color: #222;
+  border-bottom-left-radius: 2px;
+}
+
+.message.bot .bubble.error {
+  background: #fdecea;
+  color: #b3261e;
+}
+
+.chat-form {
+  display: flex;
+  padding: 14px;
+  border-top: 1px solid #eee;
+  background: #fff;
+  gap: 10px;
+}
+
+#messageInput {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+#messageInput:focus {
+  border-color: #4a54e1;
+}
+
+#sendBtn {
+  background: #4a54e1;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+#sendBtn:hover {
+  background: #3941c4;
+}
+
+#sendBtn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.typing {
+  font-style: italic;
+  color: #888;
+}
